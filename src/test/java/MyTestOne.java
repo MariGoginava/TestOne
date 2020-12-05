@@ -13,9 +13,9 @@ public class MyTestOne {
         driver.get(" http://the-internet.herokuapp.com");
         driver.manage().window().maximize();
         driver.findElement(By.linkText("Forgot Password")).click();
-        WebElement email = driver.findElement(By.xpath("//input[@type='text']"));
+        WebElement email = driver.findElement(By.id("email"));
         email.sendKeys("Example@gmail.com");
-        driver.findElement(By.xpath("//*[@id=\"form_submit\"]/i")).click();
+        driver.findElement(By.id("form_submit")).click();
         driver.quit();
     }
 }
